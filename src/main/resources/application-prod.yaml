@@ -17,13 +17,13 @@ spring:
             locator:
               enabled: true
               lower-case-service-id: true
-          routes:
-            - id: user
-              uri: lb://mujiuniv-user
-              predicates:
-                - Path=/api/account/**, /api/user/**, /api/dept/**, /api/dept, /api/staff/**
-
-            - id: function
-              uri: lb://mujiuniv-function
-              predicates:
-                - Path=/api/notice/**, /api/notice, /api/schedule/**, /api/course/**, /api/application, /api/student/**, /api/professor/**, /api/staff/**, /api/semester/**
+#          routes:
+#            - id: mujiuniv-user
+#              uri: lb://mujiuniv-user
+#              predicates:
+#                - Path=/api/account/**, /api/user/**, /api/dept/**, /api/dept
+#
+#            - id: mujiuniv-function
+#              uri: lb://mujiuniv-function
+#              predicates:
+#                - Path=/api/notice/**, /api/notice, /api/schedule/**, /api/course/**, /api/application, /api/student/**, /api/professor/**, /api/staff/**, /api/semester/**

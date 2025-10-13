@@ -35,14 +35,13 @@ spring:
       server:
         webflux:
           routes:
-            - id: user
-              uri: lb://MUJIUNIV-USER
+            - id: mujiuniv-user
+              uri: lb://mujiuniv-user
               predicates:
-                - Path=/api/account/**, /api/user/**, /api/dept/**
+                - Path=/api/account/**, /api/user/**, /api/dept/**, /pic/**
 
-
-            - id: function
-              uri: lb://MUJIUNIV-FUNCTION
+            - id: mujiuniv-function
+              uri: lb://mujiuniv-function
               predicates:
                 - Path=/api/notice/**, /api/schedule/**, /api/course/**, /api/application/**, /api/student/**, /api/professor/**, /api/semester/**,/api/staff/**
 
